@@ -1,0 +1,18 @@
+{
+  "name": "@viralvector/web",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "sh -c 'bun --cwd ../.. build.ts --srcdir=apps/web/src --outdir=dist --watch & bun --hot ../../dist/index.html'",
+    "build": "bun --cwd ../.. build.ts --srcdir=apps/web/src",
+    "start": "bun ../../dist/index.html",
+    "check": "bun run --cwd ../.. typecheck"
+  },
+  "dependencies": {
+    "@viralvector/server-api": "workspace:*"
+  },
+  "devDependencies": {
+    "@viralvector/typescript-config": "workspace:*"
+  }
+}

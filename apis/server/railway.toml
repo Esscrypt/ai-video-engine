@@ -1,0 +1,19 @@
+[build]
+builder = "DOCKERFILE"
+dockerfilePath = "./apis/server/Dockerfile"
+watchPatterns = [
+  "apis/server/**",
+  "packages/**",
+  "drizzle/**",
+  "!/*.md",
+  "bun.lock",
+  "package.json"
+]
+
+[deploy]
+numReplicas = 1
+healthcheckPath = "/api/health"
+sleepApplication = false
+restartPolicyType = "ALWAYS"
+healthcheckTimeout = 600
+restartPolicyMaxRetries = 10

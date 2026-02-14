@@ -1,0 +1,19 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "noEmit": true
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/**/*.d.ts",
+    "apis/server/src/**/*.ts",
+    "apis/chain-worker/src/**/*.ts",
+    "apps/web/src/**/*.ts",
+    "apps/web/src/**/*.tsx",
+    "packages/common/src/**/*.ts",
+    "packages/db/src/**/*.ts",
+    "packages/db/drizzle.config.ts"
+  ],
+  "exclude": ["dist", "node_modules", "drizzle/**"]
+}

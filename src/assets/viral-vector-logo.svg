@@ -1,0 +1,36 @@
+<svg width="520" height="180" viewBox="0 0 520 180" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">ViralVector logo</title>
+  <desc id="desc">Blue and orange dual-tone ring with ViralVector wordmark.</desc>
+  <defs>
+    <linearGradient id="cool" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#39b7ff"/>
+      <stop offset="100%" stop-color="#004dff"/>
+    </linearGradient>
+    <linearGradient id="warm" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffd64a"/>
+      <stop offset="100%" stop-color="#ff5a00"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <g transform="translate(30 22)">
+    <circle cx="70" cy="70" r="56" fill="none" stroke="url(#cool)" stroke-width="14" stroke-linecap="round"
+      stroke-dasharray="220 120" stroke-dashoffset="20" filter="url(#glow)"/>
+    <circle cx="70" cy="70" r="56" fill="none" stroke="url(#warm)" stroke-width="14" stroke-linecap="round"
+      stroke-dasharray="220 120" stroke-dashoffset="200" filter="url(#glow)"/>
+    <path d="M18 110 C54 126, 102 124, 134 104" fill="none" stroke="url(#warm)" stroke-width="8" stroke-linecap="round"/>
+    <path d="M10 100 C44 116, 86 114, 118 92" fill="none" stroke="url(#cool)" stroke-width="5" stroke-linecap="round"/>
+  </g>
+
+  <g transform="translate(170 108)">
+    <text font-family="Inter, Segoe UI, Arial, sans-serif" font-size="56" font-weight="800" letter-spacing="0.5">
+      <tspan fill="url(#cool)">Viral</tspan><tspan fill="url(#warm)">Vector</tspan>
+    </text>
+  </g>
+</svg>

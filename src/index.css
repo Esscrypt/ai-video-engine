@@ -1,0 +1,24 @@
+@import "../styles/globals.css";
+
+@layer base {
+  :root {
+    @apply font-sans;
+  }
+
+  body {
+    @apply min-h-screen min-w-[320px] m-0 bg-background text-foreground antialiased;
+  }
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  opacity: 0.28;
+  background:
+    radial-gradient(circle at 15% 20%, hsl(267deg 90% 55% / 16%), transparent 30%),
+    radial-gradient(circle at 80% 10%, hsl(200deg 90% 60% / 14%), transparent 28%),
+    radial-gradient(circle at 50% 80%, hsl(312deg 85% 62% / 12%), transparent 32%);
+  pointer-events: none;
+}

@@ -1,0 +1,23 @@
+{
+  "extends": "@viralvector/typescript-config/base.json",
+  "compilerOptions": {
+    "module": "Preserve",
+    "jsx": "react-jsx",
+    "verbatimModuleSyntax": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"],
+      "@viralvector/common": ["./packages/common/src/index.ts"],
+      "@viralvector/common/*": ["./packages/common/src/*"],
+      "@viralvector/db": ["./packages/db/src/index.ts"],
+      "@viralvector/db/*": ["./packages/db/src/*"],
+      "@viralvector/server-api": ["./apis/server/src/index.ts"],
+      "@viralvector/server-api/*": ["./apis/server/src/*"]
+    },
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "noPropertyAccessFromIndexSignature": false
+  },
+
+  "exclude": ["dist", "node_modules"]
+}

@@ -1,0 +1,23 @@
+{
+  "name": "@viralvector/chain-worker",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "./src/index.ts",
+  "scripts": {
+    "build": "bun run build:bin",
+    "build:bin": "bun build src/index.ts --compile --outfile ./bin/worker --sourcemap --minify-whitespace --minify-syntax --target bun",
+    "check": "bun run --cwd ../.. typecheck",
+    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist && rm -rf bin",
+    "dev": "bun run src/index.ts",
+    "start": "bun run src/index.ts"
+  },
+  "dependencies": {
+    "@viralvector/db": "workspace:*",
+    "drizzle-orm": "^0.44.5",
+    "viem": "^2.38.2"
+  },
+  "devDependencies": {
+    "@viralvector/typescript-config": "workspace:*"
+  }
+}

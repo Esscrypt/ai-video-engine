@@ -1,0 +1,15 @@
+{
+  "extends": "@viralvector/typescript-config/base.json",
+  "compilerOptions": {
+    "baseUrl": "../../",
+    "paths": {
+      "@/*": ["src/*"],
+      "@viralvector/common": ["packages/common/src/index.ts"],
+      "@viralvector/common/*": ["packages/common/src/*"],
+      "@viralvector/db": ["packages/db/src/index.ts"],
+      "@viralvector/db/*": ["packages/db/src/*"],
+      "@viralvector/server-api": ["apis/server/src/index.ts"],
+      "@viralvector/server-api/*": ["apis/server/src/*"]
+    }
+  }
+}

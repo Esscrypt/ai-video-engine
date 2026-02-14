@@ -1,0 +1,10 @@
+{
+  "name": "@viralvector/common",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./contracts": "./src/contracts.ts",
+    "./email-validation": "./src/email-validation.ts"
+  }
+}

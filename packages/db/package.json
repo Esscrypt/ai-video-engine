@@ -1,0 +1,29 @@
+{
+  "name": "@viralvector/db",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "src/index.ts",
+  "scripts": {
+    "check": "tsc --pretty --noEmit && bun run db:check",
+    "clean": "rm -rf .turbo && rm -rf node_modules",
+    "db:check": "drizzle-kit check --config ./drizzle.config.ts",
+    "db:migrate": "drizzle-kit migrate --config ./drizzle.config.ts",
+    "db:generate": "drizzle-kit generate --config ./drizzle.config.ts",
+    "db:drop": "drizzle-kit drop --config ./drizzle.config.ts"
+  },
+  "exports": {
+    "./client": "./src/client.ts",
+    "./schema": "./src/schema.ts",
+    "./bootstrap": "./src/bootstrap.ts"
+  },
+  "dependencies": {
+    "drizzle-orm": "^0.44.5",
+    "postgres": "^3.4.7"
+  },
+  "devDependencies": {
+    "@viralvector/typescript-config": "workspace:*",
+    "drizzle-kit": "^0.31.4",
+    "typescript": "^5.9.2"
+  }
+}

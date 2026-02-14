@@ -1,0 +1,1 @@
+-- no-op alignment migration: moved drizzle config and migrations under packages/db

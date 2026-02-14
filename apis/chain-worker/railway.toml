@@ -1,0 +1,17 @@
+[build]
+builder = "DOCKERFILE"
+dockerfilePath = "./apis/chain-worker/Dockerfile"
+watchPatterns = [
+  "apis/chain-worker/**",
+  "packages/**",
+  "drizzle/**",
+  "!/*.md",
+  "bun.lock",
+  "package.json"
+]
+
+[deploy]
+numReplicas = 1
+sleepApplication = false
+restartPolicyType = "ALWAYS"
+restartPolicyMaxRetries = 10
