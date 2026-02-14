@@ -10,7 +10,7 @@
   },
   "scripts": {
     "build": "bun run build:bin",
-    "build:bin": "bun build src/index.ts --compile --outfile ./bin/server --sourcemap --minify-whitespace --minify-syntax --target bun",
+    "build:bin": "mkdir -p bin && bun build src/index.ts --compile --outfile ./bin/server --sourcemap --minify-whitespace --minify-syntax --target bun",
     "check": "bun run --cwd ../.. typecheck",
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf bin",
     "dev": "bun run src/index.ts",

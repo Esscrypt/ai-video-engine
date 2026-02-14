@@ -5,8 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "sh -c 'bun --cwd ../.. build.ts --srcdir=apps/web/src --outdir=dist --watch & bun --hot ../../dist/index.html'",
-    "build": "bun --cwd ../.. build.ts --srcdir=apps/web/src",
-    "start": "bun ../../dist/index.html",
+    "build": "bun --cwd ../.. build.ts --srcdir=apps/web/src --outdir=apps/web/dist",
+    "start": "bun dist/index.html",
     "check": "bun run --cwd ../.. typecheck"
   },
   "dependencies": {
